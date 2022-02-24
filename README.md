@@ -1,3 +1,3 @@
 # AdvancedLobby
 
-Updated plugin to 1.17.1 :)
+Updated plugin to 1.12.2 :)
