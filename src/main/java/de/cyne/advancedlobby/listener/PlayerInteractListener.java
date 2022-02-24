@@ -38,7 +38,97 @@ public class PlayerInteractListener implements Listener {
             }
 
             if (e.getAction() == Action.LEFT_CLICK_BLOCK | e.getAction() == Action.RIGHT_CLICK_BLOCK) {
-                if (e.getClickedBlock().getType() == Material.CHEST | e.getClickedBlock().getType() == Material.ENDER_CHEST | e.getClickedBlock().getType() == Material.TRAPPED_CHEST | e.getClickedBlock().getType() == VMaterial.CRAFTING_TABLE.getType() | e.getClickedBlock().getType() == Material.FURNACE | e.getClickedBlock().getType() == Material.ENDER_CHEST | e.getClickedBlock().getType() == VMaterial.ENCHANTING_TABLE.getType() | e.getClickedBlock().getType() == Material.ANVIL | e.getClickedBlock().getType() == VMaterial.BLUE_BED.getType() | e.getClickedBlock().getType() == VMaterial.BLACK_BED.getType() | e.getClickedBlock().getType() == VMaterial.BROWN_BED.getType() | e.getClickedBlock().getType() == VMaterial.CYAN_BED.getType() | e.getClickedBlock().getType() == VMaterial.GRAY_BED.getType() | e.getClickedBlock().getType() == VMaterial.GREEN_BED.getType() | e.getClickedBlock().getType() == VMaterial.LIGHT_BLUE_BED.getType() | e.getClickedBlock().getType() == VMaterial.LIGHT_GRAY_BED.getType() | e.getClickedBlock().getType() == VMaterial.LIME_BED.getType() | e.getClickedBlock().getType() == VMaterial.MAGENTA_BED.getType() | e.getClickedBlock().getType() == VMaterial.ORANGE_BED.getType() | e.getClickedBlock().getType() == VMaterial.PINK_BED.getType() | e.getClickedBlock().getType() == VMaterial.PURPLE_BED.getType() | e.getClickedBlock().getType() == VMaterial.RED_BED.getType() | e.getClickedBlock().getType() == VMaterial.WHITE_BED.getType() | e.getClickedBlock().getType() == VMaterial.YELLOW_BED.getType() | e.getClickedBlock().getType() == Material.JUKEBOX | e.getClickedBlock().getType() == Material.BEACON | e.getClickedBlock().getType() == Material.DISPENSER | e.getClickedBlock().getType() == Material.LEVER | e.getClickedBlock().getType() == Material.STONE_BUTTON | e.getClickedBlock().getType() == VMaterial.ACACIA_BUTTON.getType() | e.getClickedBlock().getType() == VMaterial.BIRCH_BUTTON.getType() | e.getClickedBlock().getType() == VMaterial.DARK_OAK_BUTTON.getType() | e.getClickedBlock().getType() == VMaterial.JUNGLE_BUTTON.getType() | e.getClickedBlock().getType() == VMaterial.OAK_BUTTON.getType() | e.getClickedBlock().getType() == VMaterial.SPRUCE_BUTTON.getType() | e.getClickedBlock().getType() == Material.DAYLIGHT_DETECTOR | e.getClickedBlock().getType() == Material.HOPPER | e.getClickedBlock().getType() == Material.DROPPER | e.getClickedBlock().getType() == Material.BREWING_STAND | e.getClickedBlock().getType() == VMaterial.COMPARATOR.getType() | e.getClickedBlock().getType() == VMaterial.REPEATER.getType() | e.getClickedBlock().getType() == Material.DRAGON_EGG | e.getClickedBlock().getType() == Material.NOTE_BLOCK) {
+                if (
+                        e.getClickedBlock().getType() == Material.CHEST |
+                        e.getClickedBlock().getType() == Material.ENDER_CHEST |
+                        e.getClickedBlock().getType() == Material.TRAPPED_CHEST |
+                        e.getClickedBlock().getType() == VMaterial.CRAFTING_TABLE.getType() |
+                        e.getClickedBlock().getType() == Material.FURNACE |
+                        e.getClickedBlock().getType() == Material.ENDER_CHEST |
+                        e.getClickedBlock().getType() == VMaterial.ENCHANTING_TABLE.getType() |
+                        e.getClickedBlock().getType() == Material.ANVIL |
+                        e.getClickedBlock().getType() == VMaterial.BLUE_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.BLACK_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.BROWN_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.CYAN_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.GRAY_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.GREEN_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.LIGHT_BLUE_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.LIGHT_GRAY_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.LIME_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.MAGENTA_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.ORANGE_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.PINK_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.PURPLE_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.RED_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.WHITE_BED.getType() |
+                        e.getClickedBlock().getType() == VMaterial.YELLOW_BED.getType() |
+                        e.getClickedBlock().getType() == Material.JUKEBOX |
+                        e.getClickedBlock().getType() == Material.BEACON |
+                        e.getClickedBlock().getType() == Material.DISPENSER |
+                        e.getClickedBlock().getType() == Material.LEVER |
+                        e.getClickedBlock().getType() == Material.STONE_BUTTON |
+                        e.getClickedBlock().getType() == VMaterial.ACACIA_BUTTON.getType() |
+                        e.getClickedBlock().getType() == VMaterial.BIRCH_BUTTON.getType() |
+                        e.getClickedBlock().getType() == VMaterial.DARK_OAK_BUTTON.getType() |
+                        e.getClickedBlock().getType() == VMaterial.JUNGLE_BUTTON.getType() |
+                        e.getClickedBlock().getType() == VMaterial.OAK_BUTTON.getType() |
+                        e.getClickedBlock().getType() == VMaterial.SPRUCE_BUTTON.getType() |
+                        e.getClickedBlock().getType() == Material.DAYLIGHT_DETECTOR |
+                        e.getClickedBlock().getType() == Material.HOPPER |
+                        e.getClickedBlock().getType() == Material.DROPPER |
+                        e.getClickedBlock().getType() == Material.BREWING_STAND |
+                        e.getClickedBlock().getType() == VMaterial.COMPARATOR.getType() |
+                        e.getClickedBlock().getType() == VMaterial.REPEATER.getType() |
+                        e.getClickedBlock().getType() == Material.DRAGON_EGG |
+                        e.getClickedBlock().getType() == Material.NOTE_BLOCK |
+
+                        e.getClickedBlock().getType() == Material.DARK_OAK_DOOR |
+                        e.getClickedBlock().getType() == Material.SPRUCE_DOOR |
+                        e.getClickedBlock().getType() == Material.JUNGLE_DOOR |
+                        e.getClickedBlock().getType() == Material.BIRCH_DOOR |
+                        e.getClickedBlock().getType() == Material.ACACIA_DOOR |
+
+                        e.getClickedBlock().getType() == Material.IRON_DOOR |
+
+
+                        e.getClickedBlock().getType() == Material.IRON_TRAPDOOR |
+                        e.getClickedBlock().getType() == Material.ACACIA_FENCE_GATE |
+
+                        e.getClickedBlock().getType() == Material.DARK_OAK_FENCE_GATE |
+                        e.getClickedBlock().getType() == Material.SPRUCE_FENCE_GATE |
+                        e.getClickedBlock().getType() == Material.JUNGLE_FENCE_GATE |
+                        e.getClickedBlock().getType() == Material.BIRCH_FENCE_GATE |
+
+
+                        // 1.16.5
+                                /*
+                        e.getClickedBlock().getType() == Material.OAK_DOOR |
+                        e.getClickedBlock().getType() == Material.CRIMSON_DOOR |
+                        e.getClickedBlock().getType() == Material.WARPED_DOOR |
+                        e.getClickedBlock().getType() == Material.OAK_TRAPDOOR |
+                        e.getClickedBlock().getType() == Material.DARK_OAK_TRAPDOOR |
+                        e.getClickedBlock().getType() == Material.SPRUCE_TRAPDOOR |
+                        e.getClickedBlock().getType() == Material.JUNGLE_TRAPDOOR |
+                        e.getClickedBlock().getType() == Material.BIRCH_TRAPDOOR |
+                        e.getClickedBlock().getType() == Material.ACACIA_TRAPDOOR |
+                        e.getClickedBlock().getType() == Material.CRIMSON_TRAPDOOR |
+                        e.getClickedBlock().getType() == Material.WARPED_TRAPDOOR |
+                        e.getClickedBlock().getType() == Material.OAK_FENCE_GATE |
+                        e.getClickedBlock().getType() == Material.CRIMSON_FENCE_GATE |
+                        e.getClickedBlock().getType() == Material.WARPED_FENCE_GATE |
+
+                                 */
+
+                        // 1.12.5
+                        e.getClickedBlock().getType() == Material.WOOD_DOOR |
+                        e.getClickedBlock().getType() == Material.TRAP_DOOR |
+                        e.getClickedBlock().getType() == Material.FENCE_GATE |
+
+
+                        e.getClickedBlock().getType() == Material.FLOWER_POT
+
+                ) {
                     if (AdvancedLobby.cfg.getBoolean("disable_player_interaction")) {
                         if (!AdvancedLobby.build.contains(p)) e.setCancelled(true);
                     }

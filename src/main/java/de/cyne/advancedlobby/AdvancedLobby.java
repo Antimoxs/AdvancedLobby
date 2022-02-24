@@ -114,6 +114,7 @@ public class AdvancedLobby extends JavaPlugin {
 
     private void prepareLobbyWorlds() {
         for (World world : multiWorld_mode ? AdvancedLobby.lobbyWorlds : Bukkit.getWorlds()) {
+       // for (World world : AdvancedLobby.lobbyWorlds) {
             String weatherType = AdvancedLobby.cfg.getString("weather.weather_type").toUpperCase();
             switch (weatherType) {
                 case ("CLEAR"):

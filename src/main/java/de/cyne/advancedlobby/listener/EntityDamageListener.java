@@ -13,7 +13,7 @@ public class EntityDamageListener implements Listener {
         if (e.getEntity() instanceof Player) {
             Player p = (Player) e.getEntity();
             if (!AdvancedLobby.multiWorld_mode | AdvancedLobby.lobbyWorlds.contains(p.getWorld())) {
-                e.setCancelled(true);
+                e.setCancelled(!AdvancedLobby.build.contains(p));
             }
         } else if (AdvancedLobby.cfg.getBoolean("disable_mob_damage")) {
             if (!AdvancedLobby.multiWorld_mode | AdvancedLobby.lobbyWorlds.contains(e.getEntity().getWorld())) {
