@@ -102,7 +102,7 @@ public class PlayerInteractListener implements Listener {
 
 
                         // 1.16.5
-                                /*
+
                         e.getClickedBlock().getType() == Material.OAK_DOOR |
                         e.getClickedBlock().getType() == Material.CRIMSON_DOOR |
                         e.getClickedBlock().getType() == Material.WARPED_DOOR |
@@ -118,13 +118,16 @@ public class PlayerInteractListener implements Listener {
                         e.getClickedBlock().getType() == Material.CRIMSON_FENCE_GATE |
                         e.getClickedBlock().getType() == Material.WARPED_FENCE_GATE |
 
-                                 */
+
 
                         // 1.12.5
+                                /*
                         e.getClickedBlock().getType() == Material.WOOD_DOOR |
                         e.getClickedBlock().getType() == Material.TRAP_DOOR |
                         e.getClickedBlock().getType() == Material.FENCE_GATE |
 
+
+                                 */
 
                         e.getClickedBlock().getType() == Material.FLOWER_POT
 

@@ -43,33 +43,35 @@ public class InventoryClickListener implements Listener {
                             String cmd = AdvancedLobby.cfg.getString("inventories.teleporter.items." + item + ".cmd");
                             if (cmd == null) {
 
-                            Location location = LocationManager.getLocation(
-                                    AdvancedLobby.cfg.getString("inventories.teleporter.items." + item + ".location"));
-                            if (location == null) {
-                                p.closeInventory();
-                                if (p.hasPermission("advancedlobby.admin")) {
-                                    p.sendMessage(Locale.COMPASS_LOC_NOT_FOUND_ADMIN.getMessage(p).replace("%location%",
+                                Location location = LocationManager.getLocation(
+                                        AdvancedLobby.cfg.getString("inventories.teleporter.items." + item + ".location"));
+                                if (location == null) {
+                                    p.closeInventory();
+                                    if (p.hasPermission("advancedlobby.admin")) {
+                                        p.sendMessage(Locale.COMPASS_LOC_NOT_FOUND_ADMIN.getMessage(p).replace("%location%",
+                                                AdvancedLobby.cfg.getString("inventories.teleporter.items." + item + ".location")));
+                                        return;
+                                    }
+                                    p.sendMessage(Locale.COMPASS_LOC_NOT_FOUND.getMessage(p).replace("%location%",
                                             AdvancedLobby.cfg.getString("inventories.teleporter.items." + item + ".location")));
                                     return;
                                 }
-                                p.sendMessage(Locale.COMPASS_LOC_NOT_FOUND.getMessage(p).replace("%location%",
-                                        AdvancedLobby.cfg.getString("inventories.teleporter.items." + item + ".location")));
-                                return;
-                            }
-                            p.teleport(location);
-                            AdvancedLobby.playSound(p, p.getLocation(), "teleporter.teleport");
-                            VParticle.spawnParticle(p, "SPELL_WITCH", location, 64, 0.0f, 0.0f, 0.0f, 0.1f);
-                            for (Player players : Bukkit.getOnlinePlayers()) {
-                                if (p != players) {
-                                    if (!AdvancedLobby.playerHider.containsKey(players) && !AdvancedLobby.silentLobby.contains(players) && !AdvancedLobby.silentLobby.contains(p)) {
-                                        VParticle.spawnParticle(players, "SPELL_WITCH", location, 64, 0.0f, 0.0f, 0.0f, 0.1f);
+                                p.teleport(location);
+                                AdvancedLobby.playSound(p, p.getLocation(), "teleporter.teleport");
+                                VParticle.spawnParticle(p, "SPELL_WITCH", location, 64, 0.0f, 0.0f, 0.0f, 0.1f);
+                                for (Player players : Bukkit.getOnlinePlayers()) {
+                                    if (p != players) {
+                                        if (!AdvancedLobby.playerHider.containsKey(players) && !AdvancedLobby.silentLobby.contains(players) && !AdvancedLobby.silentLobby.contains(p)) {
+                                            VParticle.spawnParticle(players, "SPELL_WITCH", location, 64, 0.0f, 0.0f, 0.0f, 0.1f);
+                                        }
                                     }
                                 }
                             }
-}
-else {
-//exec commmand cmd
-}
+                            else {
+
+                                p.performCommand(cmd);
+
+                            }
                         }
                     }
 
