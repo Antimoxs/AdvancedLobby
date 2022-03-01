@@ -40,6 +40,9 @@ public class InventoryClickListener implements Listener {
                                 .getMaterial("inventories.teleporter.items." + item + ".material");
                         if (e.getCurrentItem().getType() == material) {
 
+                            String cmd = AdvancedLobby.cfg.getString("inventories.teleporter.items." + item + ".cmd");
+                            if (cmd == null) {
+
                             Location location = LocationManager.getLocation(
                                     AdvancedLobby.cfg.getString("inventories.teleporter.items." + item + ".location"));
                             if (location == null) {
@@ -63,6 +66,10 @@ public class InventoryClickListener implements Listener {
                                     }
                                 }
                             }
+}
+else {
+//exec commmand cmd
+}
                         }
                     }
 
